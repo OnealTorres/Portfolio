@@ -1,0 +1,75 @@
+@import "tailwindcss";
+.arrow-svg {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.draw-arrow {
+  stroke-width: 5;
+  stroke: dodgerblue;
+  fill: none;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw 1s ease-in-out forwards;
+}
+
+.tail-2 {
+  stroke-width: 5;
+  stroke: dodgerblue;
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+  animation: draw-tail 1s ease-in forwards, fade-in 0.5s ease-in forwards;
+  animation-delay: 0.2s; /* Starts after main arrow finishes */
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-tail {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gradient-bg {
+  background: #ffffff;
+  background: linear-gradient(50deg, rgba(255, 255, 255, 0) 50%, rgba(151, 163, 255, 0.59) 100%);
+}
+
+.animated_underscore{
+  animation: underscore-animation 0.8s infinite;
+}
+
+@keyframes underscore-animation {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
