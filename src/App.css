@@ -57,13 +57,16 @@
   background: linear-gradient(50deg, rgba(255, 255, 255, 0) 50%, rgba(151, 163, 255, 0.59) 100%);
 }
 
-.animated_underscore{
+.animated_underscore {
   animation: underscore-animation 0.8s infinite;
+}
+.bg-lightblue {
+  background-color: dodgerblue;
 }
 
 @keyframes underscore-animation {
   0% {
-    opacity: 0
+    opacity: 0;
   }
   100% {
     opacity: 1;
