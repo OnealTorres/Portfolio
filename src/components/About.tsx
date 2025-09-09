@@ -20,18 +20,17 @@ const cardVariants: Variants = {
 
 function About() {
   return (
-    <motion.section
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 0.2 }}
-      variants={cardVariants}
-      className="flex h-dvh pt-20 flex-col "
-    >
+    <section id="about" className="flex h-dvh pt-20 flex-col ">
       <div className="flex flex-col items-center w-full">
         <p className="text-md">Get To Know More</p>
         <p className="text-4xl text-blue-500">About Me</p>
       </div>
-      <div>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        variants={cardVariants}
+      >
         <div className="flex flex-row justify-center">
           <div className="relative w-[290px] h-[290px]">
             <div className="absolute inset-0 flex items-center justify-center p-12">
@@ -69,8 +68,8 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }
 
