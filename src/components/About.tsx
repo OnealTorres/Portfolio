@@ -1,36 +1,22 @@
 import amerikanaPiatos from "../assets/amerikana_attire_cropped_piatos.jpg";
-import { motion, Variants } from "motion/react";
-
-const cardVariants: Variants = {
-  offscreen: {
-    y: 200,
-    opacity: 0,
-    transition: {
-      duration: 1,
-    },
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-};
+import { motion } from "motion/react";
+import { slideUpVariant } from "../variants/slideUpVariant";
+import { slideRightVariant } from "../variants/slideRIghtVariant";
 
 function About() {
   return (
-    <section id="about" className="flex h-dvh pt-20 flex-col ">
-      <div className="flex flex-col items-center w-full">
-        <p className="text-md">Get To Know More</p>
-        <p className="text-4xl text-blue-500">About Me</p>
-      </div>
+    <section id="about" className="flex h-dvh pt-20 flex-col items-center justify-center ">
       <motion.div
+        className="flex flex-col items-center w-full"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
-        variants={cardVariants}
+        variants={slideRightVariant}
       >
+        <p className="text-md">Get To Know More</p>
+        <p className="text-4xl text-blue-500">About Me</p>
+      </motion.div>
+      <motion.div initial="offscreen" whileInView="onscreen" viewport={{ once: true }} variants={slideUpVariant}>
         <div className="flex flex-row justify-center">
           <div className="relative w-[290px] h-[290px]">
             <div className="absolute inset-0 flex items-center justify-center p-12">
@@ -60,11 +46,10 @@ function About() {
           </div>
           <div className="my-auto">
             <div className="w-lg h-fit p-5 bg-white rounded-2xl text-black">
-              A detail-oriented and performance-driven Fullstack Developer, proficient in
-              JavaScript, TypeScript, and modern frameworks like Express.js and React. I specialize
-              in building scalable, full-stack applications with robust database design and secure
-              API integration, leveraging agile methodologies to deliver reliable and efficient
-              solutions.
+              A detail-oriented and performance-driven Fullstack Developer, proficient in JavaScript, TypeScript, and
+              modern frameworks like Express.js and React. I specialize in building scalable, full-stack applications
+              with robust database design and secure API integration, leveraging agile methodologies to deliver reliable
+              and efficient solutions.
             </div>
           </div>
         </div>

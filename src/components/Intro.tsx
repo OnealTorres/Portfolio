@@ -5,7 +5,7 @@ import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
 
 function Intro() {
   return (
-    <section className="flex mx-5 md:mx-20 p-4 min-h-[calc(100dvh-64px)] justify-between pt-20 overflow-x-hidden">
+    <section className="flex mx-5 md:mx-20 p-4 min-h-[calc(100dvh-64px)] justify-between pt-40 overflow-x-hidden">
       <div className="flex flex-col gap-5">
         <p className="text-5xl">
           <SplitText
@@ -25,8 +25,7 @@ function Intro() {
         <p className="text-5xl text-blue-500">Full Stack Web Developer</p>
         <div className="flex">
           <p className="max-w-md flex-2">
-            I'm passionate about crafting challenging projects and exploring new technologies and
-            skills.
+            I'm passionate about crafting challenging projects and exploring new technologies and skills.
           </p>
           <p className="flex-1"></p>
         </div>
@@ -76,7 +75,7 @@ function Intro() {
       </div>
       <div>
         <AnimatedContent
-          distance={150}
+          distance={200}
           direction="horizontal"
           reverse={false}
           duration={1.2}

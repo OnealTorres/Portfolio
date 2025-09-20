@@ -22,7 +22,7 @@ const skills = [
   { image: python, title: "Other Languages", tech: "Python, PHP, C, C#" },
 ];
 
-const Projects = () => {
+const Skills = () => {
   return (
     <section id="about" className="flex h-dvh pt-20 flex-col items-center justify-center ">
       <motion.div
@@ -33,7 +33,7 @@ const Projects = () => {
         variants={slideRightVariant}
       >
         {/* <p className="text-md">Latest</p> */}
-        <p className="text-4xl text-blue-500 pl-5 md:pl-15">Personal Projects</p>
+        <p className="text-4xl text-blue-500 pl-5 md:pl-15">Technical Skills</p>
       </motion.div>
       <motion.div
         initial="offscreen"
@@ -58,4 +58,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Skills;

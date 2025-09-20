@@ -54,14 +54,26 @@
 
 .gradient-bg {
   background: #ffffff;
-  background: linear-gradient(50deg, rgba(255, 255, 255, 0) 50%, rgba(151, 163, 255, 0.59) 100%);
+  background: linear-gradient(50deg, rgba(255, 255, 255, 0) 50%, rgba(187, 195, 255, 0.59) 100%);
 }
 
 .animated_underscore {
   animation: underscore-animation 0.8s infinite;
 }
 .bg-lightblue {
-  background-color: dodgerblue;
+  background-color: #1e90ff;
+}
+
+.text-primary {
+  color: #1e90ff;
+}
+
+.text-secondary {
+  color: rgb(219, 219, 219);
+}
+
+.border-primary {
+  border: solid 1px #1e90ff;
 }
 
 @keyframes underscore-animation {
