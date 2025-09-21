@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // import { motion, Variants } from "motion/react";
 
 export default function Navbar() {
-  const [selected, setSelected] = useState("About");
+  const [selected, setSelected] = useState("");
 
   const [isAtTop, setIsAtTop] = useState(true);
 
@@ -19,24 +19,6 @@ export default function Navbar() {
     };
   }, []);
 
-  // const navAnimationVariant: Variants = {
-  //   offscreen: {
-  //     radius: 200,
-  //     x: -200,
-  //     opacity: 0,
-  //     transition: {
-  //       duration: 1,
-  //     },
-  //   },
-  //   onscreen: {
-  //     x: 0,
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 1,
-  //     },
-  //   },
-  // };
-
   return (
     <nav
       className={`${
@@ -47,7 +29,7 @@ export default function Navbar() {
         onClick={() => {
           setSelected("About");
         }}
-        href="#about"
+        href="#home"
         className="flex items-center space-x-3 rtl:space-x-reverse"
       >
         <span className="self-center text-lg font-semibold flex flex-row">
@@ -72,7 +54,7 @@ export default function Navbar() {
           />
         </svg>
       </button>
-      <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+      <div className="hidden w-full md:block md:w-auto " id="navbar-default">
         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
           <li>
             <a
@@ -91,8 +73,7 @@ export default function Navbar() {
               onClick={() => {
                 setSelected("Skills");
               }}
-              href="#skills
-                "
+              href="#skills"
               className={`block py-2 px-3 rounded-sm md:p-0  ${selected == "Skills" ? "text-blue-700" : "text-black"}`}
             >
               Skills
@@ -103,8 +84,7 @@ export default function Navbar() {
               onClick={() => {
                 setSelected("Projects");
               }}
-              href="#Projects
-                "
+              href="#projects"
               className={`block py-2 px-3 rounded-sm md:p-0  ${
                 selected == "Projects" ? "text-blue-700" : "text-black"
               }`}
@@ -117,8 +97,7 @@ export default function Navbar() {
               onClick={() => {
                 setSelected("Connect");
               }}
-              href="#connect
-                  "
+              href="#connect"
               className={`block py-2 px-3 rounded-sm md:p-0  ${selected == "Connect" ? "text-blue-700" : "text-black"}`}
             >
               Connect

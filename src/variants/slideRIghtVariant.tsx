@@ -5,14 +5,14 @@ export const slideRightVariant: Variants = {
     x: -100,
     opacity: 0,
     transition: {
-      duration: 1,
+      duration: 0.7,
     },
   },
   onscreen: {
     x: 0,
-    opacity: 1,
+    opacity: 1, 
     transition: {
-      duration: 1,
+      duration: 0.7,
     },
   },
 };

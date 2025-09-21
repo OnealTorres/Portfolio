@@ -5,14 +5,14 @@ export const slideUpVariant: Variants = {
     y: 100,
     opacity: 0,
     transition: {
-      duration: 1,
+      duration: 0.7,
     },
   },
   onscreen: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.7,
     },
   },
 };

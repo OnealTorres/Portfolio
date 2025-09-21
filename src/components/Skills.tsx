@@ -24,21 +24,21 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="about" className="flex h-dvh pt-20 flex-col items-center justify-center ">
+    <section id="skills" className="flex h-auto md:h-dvh pt-20 flex-col items-center justify-center ">
       <motion.div
         className="flex flex-col items-start w-full"
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         variants={slideRightVariant}
       >
         {/* <p className="text-md">Latest</p> */}
-        <p className="text-4xl text-blue-500 pl-5 md:pl-15">Technical Skills</p>
+        <p className="text-4xl text-blue-500 pl-5 md:pl-15">My Stack</p>
       </motion.div>
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         variants={slideUpVariant}
         className="flex flex-row flex-wrap gap-5 mt-10 items-center justify-center "
       >
