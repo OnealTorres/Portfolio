@@ -99,7 +99,7 @@ function About() {
             </svg>
           </div>
           <div className="my-auto">
-            <div className="w-lg h-fit p-5 bg-white rounded-lg text-black">
+            <div className="w-fit max-w-lg mx-2 h-fit p-5 bg-white rounded-lg text-black">
               A detail-oriented and performance-driven aspiring Fullstack Developer, proficient in JavaScript,
               TypeScript, and modern frameworks like Express.js and React. I specialize in building scalable, full-stack
               applications with robust database design and secure API integration, leveraging agile methodologies to
