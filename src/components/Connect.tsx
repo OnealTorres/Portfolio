@@ -35,8 +35,8 @@ function Connect() {
         viewport={{ once: false }}
         variants={slideRightVariant}
       >
-        <p className="text-md"> Ready to turn your idea into reality?</p>
-        <p className="text-4xl text-blue-500"> Let's Build Something Great</p>
+        <p className="text-md"> Got a brilliant idea?</p>
+        <p className="text-4xl text-blue-500">Let's Make It Real!</p>
       </motion.div>
       <motion.div
         className="mt-10 w-full"
@@ -46,7 +46,7 @@ function Connect() {
         variants={slideUpVariant}
       >
         <div className="flex flex-row justify-center">
-          <div className="flex w-full max-w-[500px] bg-white rounded-xl shadow-lg p-10">
+          <div className="flex w-full max-w-[500px] bg-white rounded-xl shadow-lg p-10 mx-3 md:mx-0">
             <form onSubmit={handleSubmit} className="space-y-5 w-full">
               <div>
                 <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
