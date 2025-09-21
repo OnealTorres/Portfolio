@@ -1,14 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// import { motion, Variants } from "motion/react";
 
 export default function Navbar() {
-  const [selected, setSelected] = useState("About");
+  const [selected, setSelected] = useState("");
+
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex flex-wrap items-center justify-between mx-5 md:mx-20 p-4 z-20 h-[4rem] ">
+    <nav
+      className={`${
+        isAtTop ? "min-w-dvw" : "rounded-lg min-w-[calc(100dvw-20px)] m-[10px]"
+      } flex flex-wrap items-center justify-between py-4 px-6 z-20 h-[4rem] fixed backdrop-blur-3xl shadow-lg transition-all duration-300 ease-in-out`}
+    >
       <a
         onClick={() => {
           setSelected("About");
         }}
-        href="#about"
+        href="#home"
         className="flex items-center space-x-3 rtl:space-x-reverse"
       >
         <span className="self-center text-lg font-semibold flex flex-row">
@@ -23,13 +44,7 @@ export default function Navbar() {
         aria-expanded="false"
       >
         <span className="sr-only">Open main menu</span>
-        <svg
-          className="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
+        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path
             stroke="currentColor"
             strokeLinecap="round"
@@ -39,7 +54,7 @@ export default function Navbar() {
           />
         </svg>
       </button>
-      <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+      <div className="hidden w-full md:block md:w-auto " id="navbar-default">
         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
           <li>
             <a
@@ -47,9 +62,7 @@ export default function Navbar() {
                 setSelected("About");
               }}
               href="#about"
-              className={`block py-2 px-3 rounded-sm md:p-0  ${
-                selected == "About" ? "text-blue-700" : "text-black"
-              }`}
+              className={`block py-2 px-3 rounded-sm md:p-0  ${selected == "About" ? "text-blue-700" : "text-black"}`}
               aria-current="page"
             >
               About
@@ -58,15 +71,25 @@ export default function Navbar() {
           <li>
             <a
               onClick={() => {
-                setSelected("Portfolio");
+                setSelected("Skills");
               }}
-              href="#portfolio
-                "
+              href="#skills"
+              className={`block py-2 px-3 rounded-sm md:p-0  ${selected == "Skills" ? "text-blue-700" : "text-black"}`}
+            >
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => {
+                setSelected("Projects");
+              }}
+              href="#projects"
               className={`block py-2 px-3 rounded-sm md:p-0  ${
-                selected == "Portfolio" ? "text-blue-700" : "text-black"
+                selected == "Projects" ? "text-blue-700" : "text-black"
               }`}
             >
-              Portfolio
+              Projects
             </a>
           </li>
           <li>
@@ -74,11 +97,8 @@ export default function Navbar() {
               onClick={() => {
                 setSelected("Connect");
               }}
-              href="#connect
-                  "
-              className={`block py-2 px-3 rounded-sm md:p-0  ${
-                selected == "Connect" ? "text-blue-700" : "text-black"
-              }`}
+              href="#connect"
+              className={`block py-2 px-3 rounded-sm md:p-0  ${selected == "Connect" ? "text-blue-700" : "text-black"}`}
             >
               Connect
             </a>
